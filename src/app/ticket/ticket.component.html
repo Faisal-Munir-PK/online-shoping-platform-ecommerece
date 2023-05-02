@@ -1,0 +1,139 @@
+<p class="text-5xl">Tickets</p>
+<div class="flex flex-row">
+  <div class="flex flex-col p-2 w-full shadow-lg py-5">
+    <div class="form-group">
+      <label for="first_name"
+        >Title <small class="text-red-700">ERROR MESSAGE HERE</small></label
+      >
+      <input
+        type="text"
+        name="title"
+        placeholder="Ticket Title"
+        class="bg-gray-300 rounded-md px-5 py-2 my-2 text-black placeholder-black shadow-sm"
+        :ngClass="{'border-red-700 text-red-500 placeholder-red-500' : true}"
+        [(ngModel)]="ticket.title"
+      />
+    </div>
+    <div class="form-group">
+      <label for="last_name"
+        >Description
+        <small class="text-red-700">ERROR MESSAGE HERE</small></label
+      >
+      <textarea
+        name="description"
+        placeholder="Description"
+        class="bg-gray-300 rounded-md px-5 py-2 my-2 text-black placeholder-black shadow-sm h-36"
+        [(ngModel)]="ticket.description"
+      ></textarea>
+    </div>
+    <div class="flex flex-wrap">
+      <button
+        type="submit"
+        class="relative left-0 cursor-pointer bg-sky-500 px-5 py-2 rounded-md text-white w-24 text-center hover:-translate-y-0.5 delay-100 duration-100 transition mr-2"
+        (click)="save()"
+      >
+        Save
+      </button>
+      <button
+        type="submit"
+        class="relative left-0 cursor-pointer bg-yellow-500 px-5 py-2 rounded-md text-white w-24 text-center hover:-translate-y-0.5 delay-100 duration-100 transition mr-2"
+      >
+        Clear
+      </button>
+    </div>
+  </div>
+  <div class="w-full mx-3 shadow-lg">
+    <p class="px-5 font-bold">List of tickets | {{ tickets.length }}</p>
+    <div class="max-h-[50vh] overflow-y-scroll">
+      <table class="bg-white">
+        <tr>
+          <th
+            class="text-sm font-medium text-gray-900 px-6 py-4 text-left border-gray-50"
+          >
+            Title
+          </th>
+          <th
+            class="text-sm font-medium text-gray-900 px-6 py-4 text-left border-gray-50"
+          >
+            Description
+          </th>
+        </tr>
+        <tr *ngFor="let item of tickets; let i = index">
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 border-gray-50"
+          >
+            <span> {{ item.title }} </span>
+          </td>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 border-gray-50"
+          >
+            <div class="w-[65vh] truncate">
+              <span>
+                {{ item.description }}
+              </span>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <!-- <div class="absolute right-10 flex flex-row mt-5">
+        <button class="bg-sky-400 p-2 rounded-lg text-white">
+          <svg width="15" height="15" viewBox="0 -2 20 20" version="1.1">
+            <g
+              id="Free-Icons"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <g
+                transform="translate(-1117.000000, -676.000000)"
+                id="Group"
+                stroke="#fff"
+                stroke-width="2"
+              >
+                <g transform="translate(1115.000000, 672.000000)" id="Shape">
+                  <path
+                    d="M13,5 L21,12 L13,19 M21,12 L3.00497942,12"
+                    transform="translate(12.002490, 12.000000) scale(-1, 1) translate(-12.002490, -12.000000) "
+                  ></path>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </button>
+        <div>
+          <span class="text-lg px-2">1</span>
+        </div>
+        <button class="bg-sky-400 p-2 rounded-lg text-white">
+          <svg width="15" height="15" viewBox="0 -2 20 20" version="1.1" class="rotate-180">
+            <g
+              id="Free-Icons"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <g
+                transform="translate(-1117.000000, -676.000000)"
+                id="Group"
+                stroke="#fff"
+                stroke-width="2"
+              >
+                <g transform="translate(1115.000000, 672.000000)" id="Shape">
+                  <path
+                    d="M13,5 L21,12 L13,19 M21,12 L3.00497942,12"
+                    transform="translate(12.002490, 12.000000) scale(-1, 1) translate(-12.002490, -12.000000) "
+                  ></path>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </button>
+      </div> -->
+    </div>
+  </div>
+</div>

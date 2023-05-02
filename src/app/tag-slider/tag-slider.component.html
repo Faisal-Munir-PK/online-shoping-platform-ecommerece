@@ -1,0 +1,156 @@
+<div class="flex items-center justify-center w-full h-full py-24 sm:py-8">
+  <div class="w-full relative flex items-center justify-center">
+    <button
+      aria-label="slide backward"
+      class="absolute z-30 left-0 focus:outline-none focus:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 cursor-pointer rounded-full border h-5 w-5 pl-1.5 bg-gray-400"
+      (click)="goPrev()"
+    >
+      <svg
+        width="4"
+        height="7"
+        viewBox="0 0 8 14"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M7 1L1 7L7 13"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+    <div class="w-full h-full mx-auto overflow-x-hidden overflow-y-hidden">
+      <div
+        id="slider"
+        class="h-full flex lg:gap-8 md:gap-6 gap-14 items-center justify-start transition ease-out duration-700"
+      >
+        <div class="flex flex-shrink-0 relative w-full sm:w-auto">
+          <button
+            class="min-w-[5rem] h-6 text-center border rounded-2xl text-xs uppercase"
+          >
+            <span class="font-mono pt-1">all</span>
+          </button>
+        </div>
+        <div class="flex flex-shrink-0 relative w-full sm:w-auto">
+          <button
+            class="min-w-[5rem] flex flex-row gap-3 h-6 text-center border rounded-2xl text-xs uppercase pr-2"
+          >
+            <img
+              src="https://d30fs77zq6vq2v.cloudfront.net/category/20102022/Salwar-Kameez-96442914475.jpg"
+              class="h-6 w-6 rounded-full"
+              alt=""
+            />
+            <span class="font-mono pt-1">shalwar kameez</span>
+          </button>
+        </div>
+        <div class="flex flex-shrink-0 relative w-full sm:w-auto">
+          <button
+            class="min-w-[5rem] flex flex-row gap-3 h-6 text-center border rounded-2xl text-xs uppercase pr-2"
+          >
+            <img
+              src="https://d30fs77zq6vq2v.cloudfront.net/category/20102022/Heels-591288276135.jpg"
+              class="h-6 w-6 rounded-full"
+              alt=""
+            />
+            <span class="font-mono pt-1">heels</span>
+          </button>
+        </div>
+        <div class="flex flex-shrink-0 relative w-full sm:w-auto">
+          <button
+            class="min-w-[5rem] flex flex-row gap-3 h-6 text-center border rounded-2xl text-xs uppercase pr-2"
+          >
+            <img
+              src="https://d30fs77zq6vq2v.cloudfront.net/category/20102022/kurta-1580139350097.jpg"
+              class="h-6 w-6 rounded-full"
+              alt=""
+            />
+            <span class="font-mono pt-1">kurtas</span>
+          </button>
+        </div>
+        <div class="flex flex-shrink-0 relative w-full sm:w-auto">
+          <button
+            class="min-w-[5rem] flex flex-row gap-3 h-6 text-center border rounded-2xl text-xs uppercase pr-2"
+          >
+            <img
+              src="https://d30fs77zq6vq2v.cloudfront.net/category/20102022/Pumps-1315954094147.jpg"
+              class="h-6 w-6 rounded-full"
+              alt=""
+            />
+            <span class="font-mono pt-1">pumps</span>
+          </button>
+        </div>
+        <div class="flex flex-shrink-0 relative w-full sm:w-auto">
+          <button
+            class="min-w-[5rem] flex flex-row gap-3 h-6 text-center border rounded-2xl text-xs uppercase pr-2"
+          >
+            <img
+              src="https://d30fs77zq6vq2v.cloudfront.net/category/20102022/Top-&-Tunics-1044761201283.jpg"
+              class="h-6 w-6 rounded-full"
+              alt=""
+            />
+            <span class="font-mono pt-1">tops & tunics</span>
+          </button>
+        </div>
+        <div class="flex flex-shrink-0 relative w-full sm:w-auto">
+          <button
+            class="min-w-[5rem] flex flex-row gap-3 h-6 text-center border rounded-2xl text-xs uppercase pr-2"
+          >
+            <img
+              src="https://d30fs77zq6vq2v.cloudfront.net/category/20102022/Sporta-Shoes-271139462521.jpg"
+              class="h-6 w-6 rounded-full"
+              alt=""
+            />
+            <span class="font-mono pt-1">sports shoes</span>
+          </button>
+        </div>
+        <div class="flex flex-shrink-0 relative w-full sm:w-auto">
+          <button
+            class="min-w-[5rem] flex flex-row gap-3 h-6 text-center border rounded-2xl text-xs uppercase pr-2"
+          >
+            <img
+              src="https://d30fs77zq6vq2v.cloudfront.net/category/20102022/T-shirts-&-Tanktops-665154067471.jpg"
+              class="h-6 w-6 rounded-full"
+              alt=""
+            />
+            <span class="font-mono pt-1">t-shirts & tanktops</span>
+          </button>
+        </div>
+        <div class="flex flex-shrink-0 relative w-full sm:w-auto">
+          <button
+            class="min-w-[5rem] flex flex-row gap-3 h-6 text-center border rounded-2xl text-xs uppercase pr-2"
+          >
+            <img
+              src="https://d30fs77zq6vq2v.cloudfront.net/category/20102022/Pumps-1315954094147.jpg"
+              class="h-6 w-6 rounded-full"
+              alt=""
+            />
+            <span class="font-mono pt-1">pumps</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <button
+      aria-label="slide forward"
+      class="absolute z-30 right-0 mr-8 focus:outline-none focus:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 rounded-full border h-5 w-5 pl-2 bg-gray-400"
+      (click)="goNext()"
+    >
+      <svg
+        width="4"
+        height="7"
+        viewBox="0 0 8 14"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1 1L7 7L1 13"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+  </div>
+</div>

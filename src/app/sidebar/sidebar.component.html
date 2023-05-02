@@ -1,0 +1,11 @@
+<div class="w-72 h-[100vh] bg-transparent shadow-2xl">
+  <ul>
+    <li
+      *ngFor="let item of items; let i = index"
+      [routerLink]="item.path"
+      class="bg-slate-300 hover:text-white text-lg shadow-lg px-5 py-2.5 m-1 hover:bg-[#1976d2] transform delay-100 duration-100 hover:translate-y-0.5 cursor-pointer"
+    >
+      {{ item.label }}
+    </li>
+  </ul>
+</div>
